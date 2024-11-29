@@ -80,12 +80,12 @@ Requires a valid JWT token in the `Authorization` header:
 ---
 
 ### **Example Response**
-## Example Response
-## user (object):
-  **fullname** (object).
-**firstname** (string): User's first name (minimum 3 characters).
-**lastname** (string): User's last name (minimum 3 characters).
-**email (string)**: User's email address (must be a valid email).
+- `user`(object):
+  - `fullname` (object).
+     -`firstname` (string):User's first name (min 3 character long)
+     -`lastname` (string):User's first name (min 3 character long)
+- **email** (string): User's email address (must be a valid email).
+-**token**(string):JWT Token
 
 
 # User Logout API Documentation
