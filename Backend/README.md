@@ -55,7 +55,7 @@ The request body should be in JSON format and include the following fields:
      -`lastname` (string):User's first name (min 3 character long)
 - **email** (string): User's email address (must be a valid email).
 - **password** (string): User's password (minimum 6 characters).
--**token**(string):JWT Token
+- **token**(string):JWT Token
 
 
 
