@@ -147,3 +147,94 @@ The request body should be in JSON format and include the following fields:
     - **capacity** (number): Vehicle passenger capacity.
     - **vehicleType** (string): Type of vehicle.
   - **token** (string): JWT Token.
+
+# Captain Login API
+
+### **Endpoint**
+`/captains/login`
+
+### **Description**
+Authenticates a captain using their email and password, returning a JWT token upon successful login.
+
+---
+
+### **HTTP Method**
+`POST`
+
+---
+
+### **Request Body**
+The request body should be in JSON format and include the following fields:
+
+- **email** (string, required): Captain's email address (must be a valid email).
+- **password** (string, required): Captain's password (minimum 6 characters).
+
+---
+
+### **Response**
+- **captain** (object):
+  - **fullname** (object):
+    - **firstname** (string): Captain's first name (minimum 3 characters).
+    - **lastname** (string): Captain's last name (minimum 3 characters).
+  - **email** (string): Captain's email address (must be a valid email).
+  - **password** (string): Captain's password (minimum 6 characters).
+  - **vehicle** (object):
+    - **color** (string): Vehicle color.
+    - **plate** (string): Vehicle plate number.
+    - **capacity** (number): Vehicle passenger capacity.
+    - **vehicleType** (string): Type of vehicle.
+  - **token** (string): JWT Token.
+
+# Captain Profile API
+
+## `/captains/profile` Endpoint
+
+### **Description**
+Retrieves the profile information of the currently authenticated captain.
+
+---
+
+### **HTTP Method**
+`GET`
+
+---
+
+### **Authentication**
+Requires a valid JWT token in the `Authorization` header:  
+`Authorization: Bearer <token>`
+
+---
+
+### **Response**
+- **captain** (object):
+  - **fullname** (object):
+    - **firstname** (string): Captain's first name (minimum 3 characters).
+    - **lastname** (string): Captain's last name (minimum 3 characters).
+  - **email** (string): Captain's email address (must be a valid email).
+  - **vehicle** (object):
+    - **color** (string): Vehicle color.
+    - **plate** (string): Vehicle plate number.
+    - **capacity** (number): Vehicle passenger capacity.
+    - **vehicleType** (string): Type of vehicle.
+
+# Captain Logout API
+
+## `/captains/logout` Endpoint
+
+### **Description**
+Logs out the current captain and blacklists the token provided in the cookie or headers.
+
+---
+
+### **HTTP Method**
+`GET`
+
+---
+
+### **Authentication**
+Requires a valid JWT token in the `Authorization` header or cookie.
+
+---
+
+### **Response**
+- **message** (string): Logout successfully.
