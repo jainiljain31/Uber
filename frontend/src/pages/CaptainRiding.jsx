@@ -42,11 +42,11 @@ const CaptainRiding = () => {
         </Link>
       </div>
       <div className="h-4/5">
-        {/* <img
+        <img
           className="h-full w-full object-cover"
           src="https://miro.medium.com/v2/resize:fit:1400/0*gwMx05pqII5hbfmX.gif"
-        /> */}
-        <LiveTracking />
+        />
+        {/* <LiveTracking /> */}
       </div>
       <div className="h-1/5 p-6 bg-yellow-400 flex items-center justify-between relative" onClick={()=>{
         setFinishRidePanel(true)

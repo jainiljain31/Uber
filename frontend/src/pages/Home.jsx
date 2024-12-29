@@ -236,11 +236,11 @@ const Home = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
       />
       <div className="w-screen h-screen">
-        {/* <img
+        <img
           className="h-full w-full object-cover"
           src="https://miro.medium.com/v2/resize:fit:1400/0*gwMx05pqII5hbfmX.gif"
-        /> */}
-        <LiveTracking />
+        />
+        {/* <LiveTracking /> */}
       </div>
       <div className="flex flex-col absolute top-0 justify-end w-full h-screen">
         <div className="h-[30%] bg-white p-6 relative">
