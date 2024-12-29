@@ -22,19 +22,18 @@ const CaptainHome = () => {
   const { captain } = useContext(CaptainDataContext);
 
   useEffect(() => {
-    socket.emit('join', {
+    socket.emit("join", {
       userType: "captain",
       userId: captain._id,
     });
     const updateLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
-
           console.log({
             userId: captain._id,
             location: {
               lng: position.coords.longitude,
-              ltd: position.coords.latitude
+              ltd: position.coords.latitude,
             },
           });
 
@@ -42,7 +41,7 @@ const CaptainHome = () => {
             userId: captain._id,
             location: {
               lng: position.coords.longitude,
-              ltd: position.coords.latitude
+              ltd: position.coords.latitude,
             },
           });
         });
@@ -74,7 +73,7 @@ const CaptainHome = () => {
         },
       }
     );
-    console.log(response)
+    console.log(response);
 
     setRidePopupPanel(false);
     setConfirmRidePopupPanel(true);
@@ -150,7 +149,7 @@ const CaptainHome = () => {
         className="w-full pt-12 fixed z-10 bottom-0 bg-white px-3 py-6 translate-y-full h-screen"
       >
         <ConfirmRidePopUp
-        ride={ride}
+          ride={ride}
           setRidePopupPanel={setRidePopupPanel}
           setConfirmRidePopupPanel={setConfirmRidePopupPanel}
         />

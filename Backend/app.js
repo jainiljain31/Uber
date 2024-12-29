@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the API!");
+  res.send("Welcome to the API!!");
 });
 
 app.use("/users", userRoutes);
@@ -28,3 +28,4 @@ app.use("/maps",mapRoutes);
 app.use("/rides",rideRoutes);
 
 module.exports = app;
+
